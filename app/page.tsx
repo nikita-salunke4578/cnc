@@ -22,14 +22,13 @@ export default function HomePage() {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-foreground opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-primary-foreground"></span>
                 </span>
-                12 Years of Excellence in CNC Training
+                12+ Years of Excellence in CNC & VMC Training
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold mb-6 text-balance leading-tight">
-                Get Enrolled And Make Your Future Awesome
+                Build Your Career in CNC & Advanced Manufacturing
               </h1>
               <p className="text-lg md:text-xl mb-8 text-primary-foreground/90 leading-relaxed">
-                Transform your career with industry-leading CNC training. Master precision machining, CAD/CAM, and
-                advanced manufacturing at Finix Education Institute.
+                Get industry-ready with hands-on training in CNC Operating, Programming, and CAD/CAM. Learn real-world machining skills, work on advanced equipment, and prepare for high-demand manufacturing jobs with expert guidance at Finix Education Institute.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
@@ -46,7 +45,7 @@ export default function HomePage() {
                 >
                   <Link href="/youtube">
                     <Youtube className="mr-2 h-5 w-5" />
-                    Watch YouTube Lectures
+                    Watch Demo Classes
                   </Link>
                 </Button>
               </div>
@@ -54,14 +53,14 @@ export default function HomePage() {
 
             {/* Right Image */}
             <div className="order-1 lg:order-2 animate-in fade-in slide-in-from-right duration-700">
-              <div className="relative max-w-xs mx-auto lg:max-w-sm">
+              <div className="relative max-w-sm mx-auto lg:max-w-md xl:max-w-lg">
                 {/* Main Image */}
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-primary-foreground/20 hover:border-primary-foreground/30 transition-all duration-300 hover:scale-105">
                   <Image
                     src="/images/institute main photo.png"
                     alt="Modern CNC Machine in Operation"
-                    width={400}
-                    height={300}
+                    width={600}
+                    height={450}
                     className="w-full h-auto"
                     priority
                   />
@@ -99,7 +98,7 @@ export default function HomePage() {
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-primary via-secondary to-accent mx-auto mb-4 rounded-full animate-in fade-in duration-500 delay-200"></div>
             <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed animate-in fade-in duration-500 delay-300">
-              We provide industry-leading CNC training with a focus on practical skills and career outcomes
+              We provide industry-leading training in CNC Operating, Programming, and CAD/CAM with a focus on practical skills and career outcomes
             </p>
           </div>
 
@@ -186,6 +185,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
             {[
               {
+                id: "cnc-turning-milling",
                 title: "CNC Turning & Milling",
                 description:
                   "Complete training in VTL/HTL and VMC/HMC operations from operator to advanced programming",
@@ -193,41 +193,40 @@ export default function HomePage() {
                 level: "All Levels",
               },
               {
+                id: "cadcam-training",
                 title: "CAD/CAM Training",
                 description: "Master AutoCAD, UNIGRAPHICS, and MASTERCAM with 2D/3D modeling and toolpath generation",
                 duration: "Flexible Timing",
                 level: "Beginner to Advanced",
               },
               {
+                id: "quality-management",
                 title: "Advanced Quality Management",
                 description: "Learn ISO 9001, Six Sigma, SPC, PPAP, FMEA, and quality auditing procedures",
                 duration: "1 Month (Full Time)",
                 level: "Professional",
               },
               {
+                id: "industrial-automation",
                 title: "Industrial Automation",
                 description: "Training in PLC, robotics, and modern manufacturing automation systems",
                 duration: "Custom Duration",
                 level: "Intermediate",
               },
               {
+                id: "cnc-maintenance",
                 title: "CNC Maintenance",
                 description: "All types of maintenance work, parameter setting, and troubleshooting techniques",
                 duration: "Custom Duration",
                 level: "Advanced",
               },
-              {
-                title: "Advanced Diploma Manufacturing",
-                description: "Comprehensive 6-month program covering turning, milling, CAD/CAM, and quality management",
-                duration: "6 Months (Full Time)",
-                level: "Complete Program",
-              },
+
             ].map((course, index) => (
               <Card key={index}>
                 <CardHeader>
                   <CardTitle>{course.title}</CardTitle>
                   <CardDescription className="text-xs">
-                    {course.duration} • {course.level}
+                    {course.duration}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -235,7 +234,7 @@ export default function HomePage() {
                 </CardContent>
                 <CardFooter>
                   <Button variant="outline" asChild className="w-full bg-transparent">
-                    <Link href="/courses">View Details</Link>
+                    <Link href={`/courses/${course.id}`}>View Details</Link>
                   </Button>
                 </CardFooter>
               </Card>
@@ -358,7 +357,7 @@ export default function HomePage() {
             <div className="aspect-video bg-muted rounded-lg overflow-hidden border-2 border-border">
               <iframe
                 className="w-full h-full"
-                src="https://www.youtube.com/embed/eD97F41lzSE"
+                src="https://www.youtube.com/embed/videoseries?list=PLqz7bzOhwrLq1cdcBseg2hz5RMmmpr-df"
                 title="YouTube video player"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

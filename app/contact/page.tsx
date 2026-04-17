@@ -49,8 +49,8 @@ export default function ContactPage() {
                         <MapPin className="h-6 w-6 text-primary" />
                       </div>
                       <div>
-                        <CardTitle className="text-lg mb-2">Our Location</CardTitle>
-                        <p className="text-muted-foreground leading-relaxed">
+                        <CardTitle className="text-[17px] mb-2">Our Location</CardTitle>
+                        <p className="text-[15px] text-muted-foreground leading-relaxed">
                           Finix Education Institute
                           <br />
                           Nareshwar Mandir Road
@@ -73,8 +73,8 @@ export default function ContactPage() {
                         <Phone className="h-6 w-6 text-primary" />
                       </div>
                       <div>
-                        <CardTitle className="text-lg mb-2">Phone</CardTitle>
-                        <p className="text-muted-foreground">
+                        <CardTitle className="text-[17px] mb-2">Phone</CardTitle>
+                        <p className="text-[15px] text-muted-foreground">
                           <a href="tel:+918668621630" className="hover:text-primary transition-colors">
                             +91 8668621630
                           </a>
@@ -95,8 +95,8 @@ export default function ContactPage() {
                         <Mail className="h-6 w-6 text-primary" />
                       </div>
                       <div>
-                        <CardTitle className="text-lg mb-2">Email</CardTitle>
-                        <p className="text-muted-foreground">
+                        <CardTitle className="text-[17px] mb-2">Email</CardTitle>
+                        <p className="text-[15px] text-muted-foreground">
                           <a href="mailto:finixeducation@gmail.com" className="hover:text-primary transition-colors">
                             finixeducation@gmail.com
                           </a>
@@ -115,13 +115,13 @@ export default function ContactPage() {
                         <Clock className="h-6 w-6 text-primary" />
                       </div>
                       <div>
-                        <CardTitle className="text-lg mb-2">Course Timings</CardTitle>
-                        <p className="text-muted-foreground leading-relaxed">
+                        <CardTitle className="text-[17px] mb-2">Course Timings</CardTitle>
+                        <p className="text-[15px] text-muted-foreground leading-relaxed">
                           Full Time: 9:30 AM - 4:30 PM
                           <br />
                           Part Time: 3 hours/day (Flexible timing)
                           <br />
-                          <span className="text-xs mt-2 block">Contact us to discuss your preferred schedule</span>
+                          <span className="text-[11px] mt-2 block">Contact us to discuss your preferred schedule</span>
                         </p>
                       </div>
                     </div>

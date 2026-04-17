@@ -89,9 +89,11 @@ export default function QuickEnquiryForm() {
                 <option value="CNC Turning & Milling">CNC Turning & Milling</option>
                 <option value="CAD/CAM Training">CAD/CAM Training</option>
                 <option value="Advanced Quality Management">Advanced Quality Management</option>
+                <option value="Advanced Diploma Manufacturing">Advanced Diploma Manufacturing</option>
+                <option value="Diploma in Mechanical Engineering">Diploma in Mechanical Engineering</option>
+                <option value="Diploma in Electronic Engineering">Diploma in Electronic Engineering</option>
                 <option value="Industrial Automation">Industrial Automation</option>
                 <option value="CNC Maintenance">CNC Maintenance</option>
-                <option value="Advanced Diploma Manufacturing">Advanced Diploma Manufacturing</option>
               </select>
             </div>
             <Button type="submit" className="w-full" size="lg" disabled={loading}>

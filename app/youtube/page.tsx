@@ -46,7 +46,7 @@ export default function YouTubePage() {
               <iframe
                 width="100%"
                 height="100%"
-                src="https://www.youtube.com/embed/eD97F41lzSE"
+                src="https://www.youtube.com/embed/videoseries?list=PLqz7bzOhwrLq1cdcBseg2hz5RMmmpr-df"
                 title="YouTube video player"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -61,7 +61,7 @@ export default function YouTubePage() {
                 demonstrations.
               </p>
               <Button size="lg" asChild>
-                <a href="https://youtu.be/eD97F41lzSE" target="_blank" rel="noopener noreferrer">
+                <a href="https://youtube.com/playlist?list=PLqz7bzOhwrLq1cdcBseg2hz5RMmmpr-df" target="_blank" rel="noopener noreferrer">
                   <Youtube className="mr-2 h-5 w-5" />
                   Watch on YouTube
                 </a>

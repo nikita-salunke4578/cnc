@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Target, Eye, Award, CheckCircle } from "lucide-react"
+import Image from "next/image"
 
 export default function AboutPage() {
   return (
@@ -46,7 +47,7 @@ export default function AboutPage() {
                   industry professionals who bring practical insights to every lesson.
                 </p>
                 <p className="font-medium text-foreground">
-                  Located at: Naheshwar Mandir Road, A/P. Sanaswadi, Tal. Shirur, Pune-412208
+                  Located at: Nareshwar Mandir Road, A/P. Sanaswadi, Tal. Shirur, Pune-412208
                 </p>
               </div>
 
@@ -178,23 +179,20 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 max-w-6xl mx-auto">
             {[
-              { name: "MSBVEE Registered", org: "Maharashtra State Board of Vocational Examinations" },
-              { name: "Skill India Partner", org: "Government of India Initiative" },
-              { name: "Registered Institute", org: "Reg. No.: MAH-1883/2014/F-45463/PUNE" },
-            ].map((cert, index) => (
-              <Card key={index} className="text-center border-2">
-                <CardHeader>
-                  <div className="h-16 w-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3">
-                    <Award className="h-8 w-8 text-primary" />
-                  </div>
-                  <CardTitle className="text-base">{cert.name}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-xs text-muted-foreground">{cert.org}</p>
-                </CardContent>
-              </Card>
+              "/images/certificate-1.jpg",
+              "/images/certificate-2.jpg",
+              "/images/certificate-3.jpg"
+            ].map((imgSrc, index) => (
+              <div key={index} className="relative w-full aspect-[3/4] sm:aspect-[4/3] md:aspect-[3/4]">
+                <Image 
+                  src={imgSrc} 
+                  alt={`Certificate ${index + 1}`} 
+                  fill 
+                  className="object-contain" 
+                />
+              </div>
             ))}
           </div>
         </div>

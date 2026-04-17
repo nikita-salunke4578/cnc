@@ -1,23 +1,12 @@
 import Link from "next/link"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Calendar, User, ArrowRight } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import pool from "@/lib/db"
-import type { RowDataPacket } from "mysql2"
-
-export const dynamic = "force-dynamic"
+import { blogs, BlogPost } from "@/lib/blog-data"
 
 export default async function BlogPage() {
-  let blogPosts: RowDataPacket[] = []
+  const blogPosts: BlogPost[] = blogs
 
-  try {
-    const [rows] = await pool.execute<RowDataPacket[]>(
-      "SELECT * FROM blogs ORDER BY published_date DESC"
-    )
-    blogPosts = rows || []
-  } catch (error) {
-    console.error("Error fetching blogs:", error)
-  }
 
   return (
     <div>
@@ -29,7 +18,7 @@ export default async function BlogPage() {
             Knowledge Hub
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance animate-in fade-in slide-in-from-bottom duration-700">
-            CNC Training Blog
+            Blogs
           </h1>
           <div className="w-24 h-1 bg-gradient-to-r from-primary via-secondary to-accent mb-6 rounded-full animate-in fade-in slide-in-from-left duration-700 delay-200"></div>
           <p className="text-lg text-muted-foreground max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom duration-700 delay-300">
@@ -61,23 +50,8 @@ export default async function BlogPage() {
                   <CardContent className="flex-1">
                     <p className="text-muted-foreground leading-relaxed line-clamp-3">{post.excerpt}</p>
                   </CardContent>
-                  <CardFooter className="flex items-center justify-between pt-4 border-t">
-                    <div className="flex flex-col gap-1 text-xs text-muted-foreground">
-                      <div className="flex items-center gap-1">
-                        <User className="h-3 w-3" />
-                        <span>{post.author_name}</span>
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <Calendar className="h-3 w-3" />
-                        <span>
-                          {new Date(post.published_date).toLocaleDateString("en-US", {
-                            month: "short",
-                            day: "numeric",
-                            year: "numeric",
-                          })}
-                        </span>
-                      </div>
-                    </div>
+                  <CardFooter className="flex items-center justify-end pt-4 border-t">
+
                     <Button variant="ghost" size="sm" asChild>
                       <Link href={`/blog/${post.slug}`}>
 

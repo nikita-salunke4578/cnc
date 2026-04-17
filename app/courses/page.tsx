@@ -31,15 +31,7 @@ const courses = [
     level: "Professional",
     mode: "Offline Only",
   },
-  {
-    id: "advanced-diploma-manufacturing",
-    title: "Advanced Diploma Manufacturing",
-    description:
-      "Comprehensive 6-month program covering all aspects: turning, milling, CAD/CAM, and quality management systems.",
-    duration: "6 Months (Full Time: 9:30 AM - 4:00 PM)",
-    level: "Complete Professional Program",
-    mode: "Offline Only",
-  },
+
   {
     id: "industrial-automation",
     title: "Industrial Automation",
@@ -93,14 +85,6 @@ export default function CoursesPage() {
                     <span className="inline-flex items-center gap-1">
                       <Clock className="h-3 w-3" />
                       {course.duration}
-                    </span>
-                    <span className="inline-flex items-center gap-1">
-                      <BarChart className="h-3 w-3" />
-                      {course.level}
-                    </span>
-                    <span className="inline-flex items-center gap-1">
-                      <MapPin className="h-3 w-3" />
-                      {course.mode}
                     </span>
                   </CardDescription>
                 </CardHeader>

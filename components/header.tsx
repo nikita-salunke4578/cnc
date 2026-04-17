@@ -20,16 +20,16 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto flex h-16 items-center justify-between px-4">
-        <Link href="/" className="flex items-center gap-3">
+      <div className="container mx-auto flex py-3 md:h-20 items-center justify-between px-4">
+        <Link href="/" className="flex items-center gap-2">
           <Image
             src="/images/finix-logo-transparent.png"
             alt="Finix Education Institute"
-            width={50}
-            height={50}
-            className="h-12 w-auto"
+            width={70}
+            height={70}
+            className="h-14 w-auto md:h-16"
           />
-          <span className="font-bold text-lg hidden sm:inline-block">Finix Education Institute</span>
+          <span className="font-bold text-[19px] leading-tight flex-1">Finix Education Institute</span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -38,7 +38,7 @@ export function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
+              className="text-[15px] font-medium text-foreground/80 hover:text-primary transition-colors"
             >
               {link.label}
             </Link>
@@ -65,7 +65,7 @@ export function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
+                className="text-[15px] font-medium text-foreground/80 hover:text-primary transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {link.label}

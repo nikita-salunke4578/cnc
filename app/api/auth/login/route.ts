@@ -1,7 +1,5 @@
 import { NextRequest, NextResponse } from "next/server"
-import pool from "@/lib/db"
 import { comparePassword, signToken, COOKIE_NAME } from "@/lib/auth"
-import type { RowDataPacket } from "mysql2"
 
 export async function POST(request: NextRequest) {
   try {
@@ -11,22 +9,18 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Email and password are required" }, { status: 400 })
     }
 
-    // Find admin by email
-    const [rows] = await pool.execute<RowDataPacket[]>(
-      "SELECT id, email, password_hash, name FROM admins WHERE email = ?",
-      [email]
-    )
+    // Hardcoded admin check
+    const adminEmail = process.env.ADMIN_EMAIL || "admin@finix.com"
+    const adminPassword = process.env.ADMIN_PASSWORD || "password"
 
-    if (rows.length === 0) {
+    if (email !== adminEmail || password !== adminPassword) {
       return NextResponse.json({ error: "Invalid login credentials" }, { status: 401 })
     }
 
-    const admin = rows[0]
-
-    // Compare password
-    const isValid = await comparePassword(password, admin.password_hash)
-    if (!isValid) {
-      return NextResponse.json({ error: "Invalid login credentials" }, { status: 401 })
+    const admin = {
+      id: 1,
+      name: "Admin",
+      email: adminEmail,
     }
 
     // Create JWT token

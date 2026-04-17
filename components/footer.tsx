@@ -31,19 +31,19 @@ export function Footer() {
               <div className="flex items-start gap-2 text-sm">
                 <MapPin className="h-4 w-4 mt-0.5 text-primary flex-shrink-0" />
                 <span className="text-muted-foreground">
-                  Naheshwar Mandir Road, A/P. Sanaswadi, Tal. Shirur, Pune-412208
+                  Nareshwar Mandir Road, A/P. Sanaswadi, Tal. Shirur, Pune-412208
                 </span>
               </div>
               <div className="flex flex-col gap-1">
                 <div className="flex items-center gap-2 text-sm">
                   <Phone className="h-4 w-4 text-primary flex-shrink-0" />
-                  <a href="tel:+919011330043" className="text-muted-foreground hover:text-primary transition-colors">
-                    +91 9011330043
+                  <a href="tel:+919922568308" className="text-muted-foreground hover:text-primary transition-colors">
+                    +91 9922568308
                   </a>
                 </div>
                 <div className="flex items-center gap-2 text-sm pl-6">
-                  <a href="tel:+918888555292" className="text-muted-foreground hover:text-primary transition-colors">
-                    +91 8888555292
+                  <a href="tel:+918668621630" className="text-muted-foreground hover:text-primary transition-colors">
+                    +91 8668621630
                   </a>
                 </div>
               </div>
@@ -114,7 +114,7 @@ export function Footer() {
                 <Linkedin className="h-4 w-4" />
               </a>
               <a
-                href="#"
+                href="https://www.youtube.com/@Finixcncskills01"
                 className="h-9 w-9 flex items-center justify-center rounded border border-border hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors"
                 aria-label="YouTube"
               >
