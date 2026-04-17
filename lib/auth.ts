@@ -1,7 +1,5 @@
 import { SignJWT, jwtVerify } from "jose"
 import { cookies } from "next/headers"
-import bcrypt from "bcryptjs"
-
 const COOKIE_NAME = "auth_token"
 const SECRET = new TextEncoder().encode(process.env.AUTH_SECRET || "default-secret-change-me-in-production")
 
@@ -44,18 +42,6 @@ export async function getSession(): Promise<AuthUser | null> {
   return verifyToken(token)
 }
 
-/**
- * Hash a plaintext password using bcrypt
- */
-export async function hashPassword(password: string): Promise<string> {
-  return bcrypt.hash(password, 12)
-}
 
-/**
- * Compare a plaintext password against a bcrypt hash
- */
-export async function comparePassword(password: string, hash: string): Promise<boolean> {
-  return bcrypt.compare(password, hash)
-}
 
 export { COOKIE_NAME }
